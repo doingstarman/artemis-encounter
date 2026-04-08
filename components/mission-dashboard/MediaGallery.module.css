@@ -1,0 +1,68 @@
+﻿.wrap {
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  background: var(--card);
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.head p {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid rgba(159, 182, 210, 0.22);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(8, 14, 24, 0.7);
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.imageWrap :global(img) {
+  object-fit: cover;
+}
+
+.card div {
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.card h3 {
+  font-size: 0.86rem;
+  line-height: 1.34;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card a {
+  color: var(--accent-cyan);
+  font-size: 0.8rem;
+}
+
+.empty {
+  color: var(--text-muted);
+}

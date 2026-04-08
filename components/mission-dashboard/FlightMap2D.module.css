@@ -1,0 +1,138 @@
+.wrap {
+  display: grid;
+  gap: 10px;
+}
+
+.map {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+.planetLabel {
+  font-size: 15px;
+  fill: rgba(200, 222, 255, 0.82);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.trajectoryOut {
+  fill: none;
+  stroke: rgba(72, 211, 255, 0.9);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.trajectoryRet {
+  fill: none;
+  stroke: rgba(72, 211, 255, 0.3);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 8;
+  stroke-linecap: round;
+}
+
+.keyPoint {
+  fill: var(--accent-orange);
+  stroke: rgba(255, 171, 87, 0.5);
+  stroke-width: 3;
+}
+
+.keyLabel {
+  fill: rgba(235, 245, 255, 0.78);
+  font-size: 11px;
+  font-family: var(--font-body), sans-serif;
+}
+
+.shipGroup {
+  transition: transform 400ms linear;
+}
+
+/* Orion Crew Module — blunt cone */
+.cm {
+  fill: #cfe0f5;
+  stroke: rgba(180, 210, 255, 0.6);
+  stroke-width: 0.5;
+}
+
+/* Heat shield */
+.heatShield {
+  fill: #3a3a52;
+  stroke: rgba(100, 100, 160, 0.5);
+  stroke-width: 0.5;
+}
+
+/* European Service Module body */
+.sm {
+  fill: #606878;
+  stroke: rgba(120, 140, 170, 0.4);
+  stroke-width: 0.4;
+}
+
+/* Solar array wings */
+.solar {
+  fill: #1a3a90;
+  stroke: rgba(80, 130, 255, 0.6);
+  stroke-width: 0.5;
+}
+
+/* Launch Abort System tower */
+.las {
+  stroke: rgba(200, 220, 255, 0.7);
+  stroke-width: 1;
+}
+
+.lasTip {
+  fill: rgba(200, 220, 255, 0.8);
+}
+
+/* Engine exhaust glow */
+.exhaustGlow {
+  fill: rgba(80, 180, 255, 0.15);
+  animation: exhaustPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes exhaustPulse {
+  0%, 100% { opacity: 0.1; ry: 5; }
+  50% { opacity: 0.35; ry: 8; }
+}
+
+@keyframes centerPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 2px;
+}
+
+.stageBadge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent-cyan);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.stageDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 6px var(--accent-cyan);
+  flex-shrink: 0;
+  animation: centerPulse 2s ease-in-out infinite;
+}
+
+.footerRoute {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}

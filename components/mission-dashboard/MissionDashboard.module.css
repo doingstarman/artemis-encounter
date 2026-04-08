@@ -1,0 +1,34 @@
+.page {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/*
+  display:grid on mapArea stretches its single child (.wrap) to fill
+  the full cell width by default — no explicit width needed on the child.
+*/
+.mapArea {
+  overflow: hidden;
+  min-height: 0;
+  min-width: 0;
+  display: grid;
+}
+
+/* SVG is width:100% in FlightMap2D; height follows the 1000:460 aspect ratio */
+.mapArea :global(svg) {
+  border-radius: 0 !important;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 640px) {
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    min-height: 100dvh;
+    overflow: auto;
+  }
+}
