@@ -23,6 +23,18 @@ export function MissionSelector() {
           Открыть дашборд
         </Link>
       </article>
+
+      <article className={styles.card}>
+        <div>
+          <p className={styles.liveTag}>Тестовый live-мокап</p>
+          <h2>Starship orbital flight</h2>
+          <p>Интерактивный центр управления: 3D-орбита, телеметрия, ground track и таймлайн полёта.</p>
+        </div>
+
+        <Link className={styles.button} href="/missions/starship">
+          Открыть live-мокап
+        </Link>
+      </article>
     </section>
   );
 }

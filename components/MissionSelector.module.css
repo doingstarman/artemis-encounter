@@ -52,6 +52,14 @@
   margin-bottom: 8px;
 }
 
+.liveTag {
+  font-size: 0.8rem;
+  color: #ff5151 !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
 .card h2 {
   margin-bottom: 8px;
   font-size: 1.7rem;
